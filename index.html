@@ -20,11 +20,47 @@
       crossorigin="anonymous"
     ></script>
     <style>
-      .fullscreen-img {
-        display: block;
+      @charset "UTF-8";
+      section {
+        margin: 150px auto;
+        max-width: 1000px;
       }
-      .content {
-        text-align: center;
+
+      .mainImg {
+        width: 500px;
+        margin: auto;
+
+        position: relative;
+      }
+
+      .mainImg img {
+        max-width: 1200%;
+      }
+
+      .mainImg::after {
+        content: "";
+        width: 250px;
+        height: 200px;
+        background-color: #700502;
+
+        position: absolute;
+        top: -10px;
+        right: -115px;
+
+        z-index: -1;
+      }
+
+      .mainImg::before {
+        content: "";
+        width: 200px;
+        height: 200px;
+        background-color: #201821;
+
+        position: absolute;
+        bottom: -13px;
+        left: -13px;
+
+        z-index: -1;
       }
       footer {
         opacity: 0.8;
@@ -33,16 +69,14 @@
     <title>My favorite J-Rock star🌟</title>
   </head>
   <body>
-    <header>
-      <div class="fullscreen-img">
+    <section>
+      <figure class="mainImg">
         <img
           src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/070/473/original/Glay_header.jpg?1678227740"
           alt="Glay member picture"
-          class="d-flex img-fluid"
         />
-      </div>
-      <div class="content">GLAY</div>
-    </header>
+      </figure>
+    </section>
     <footer class="text-center mt-5">
       This page was coded with ❤ by
       <a
