@@ -26,6 +26,11 @@
         max-width: 1000px;
       }
 
+      .grid-2-columns {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
       .mainImg {
         width: 500px;
         margin: auto;
@@ -62,22 +67,81 @@
 
         z-index: -1;
       }
+
+      h1 {
+        font-size: 150px;
+        line-height: 1.5;
+      }
+
+      p {
+        margin: 30px;
+      }
+
       footer {
         opacity: 0.8;
+        text-align: center;
+      }
+
+      @media (max-width: 400px) {
+        .grid-2-columns {
+          display: block;
+        }
+
+        .mainImg img {
+          max-width: 70%;
+          position: relative;
+          right: -5px;
+        }
+
+        .mainImg::after {
+          background-color: #700502;
+
+          position: absolute;
+          top: -13px;
+          right: 80px;
+
+          z-index: -1;
+        }
+
+        h1 {
+          font-size: 96px;
+          text-align: center;
+        }
+
+        p {
+          font-size: 14px;
+        }
+      }
+
+      @media (max-width: 900px) and (min-width: 401px) {
       }
     </style>
     <title>My favorite J-Rock star🌟</title>
   </head>
   <body>
-    <section>
-      <figure class="mainImg">
-        <img
-          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/070/473/original/Glay_header.jpg?1678227740"
-          alt="Glay member picture"
-        />
-      </figure>
+    <section class="container">
+      <div class="grid grid-2-columns">
+        <h1>GLAY</h1>
+
+        <figure class="mainImg">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/070/473/original/Glay_header.jpg?1678227740"
+            alt="GLAY member picture"
+          />
+        </figure>
+      </div>
+      <p>
+        GLAY is a Japanese rock band formed in 1988, with the core members being
+        together since 1992. They compose songs in rock and pop genres and have
+        experimented with various other genres. Their 1997 album Review is the
+        fifth best-selling album in Japan, with five million copies sold. In
+        1999, they held the largest-ticketed concert ever by a single act at the
+        time, with 200,000 people attending. As of 2008, GLAY had sold an
+        estimated 51 million records, making them one of the top ten
+        best-selling artists of all time in Japan.
+      </p>
     </section>
-    <footer class="text-center mt-5">
+    <footer>
       This page was coded with ❤ by
       <a
         href="https://www.linkedin.com/in/natsukishuko/"
