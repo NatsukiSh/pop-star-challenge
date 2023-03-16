@@ -19,13 +19,15 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
+    <script
+      src="https://kit.fontawesome.com/300b9417c8.js"
+      crossorigin="anonymous"
+    ></script>
     <style>
-      @charset "UTF-8";
-      section {
-        margin: 150px auto;
+      .container {
+        margin: 100px auto;
         max-width: 1000px;
       }
-
       .grid-2-columns {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -72,23 +74,169 @@
         font-size: 150px;
         line-height: 1.5;
       }
+      h2 {
+        text-align: center;
+      }
 
+      .biography {
+        margin: 100px 30px;
+        text-align: center;
+      }
       p {
-        margin: 30px;
+        text-align: center;
+      }
+
+      main.container {
+        max-width: 1200%;
+        margin: 0 auto;
+      }
+
+      .video {
+        width: 100%;
+        aspect-ratio: 1/1;
+      }
+
+      .grid-3-columns {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 20px;
+      }
+
+      .sbn-list {
+        margin-right: 20px;
+        overflow: hidden;
+        position: fixed;
+        right: 0;
+        top: 40%;
+      }
+
+      .sbn:first-of-type,
+      .sbn:nth-of-type(2) {
+        border-top: none;
+        height: 200px;
+        padding-top: 0;
+      }
+
+      .sbn:nth-of-type(odd) {
+        float: left;
+      }
+
+      ul {
+        margin-top: 0;
+        margin-bottom: 1rem;
+      }
+
+      ul {
+        padding-left: 2rem;
+      }
+
+      *,
+      ::after,
+      ::before {
+        box-sizing: border-box;
+      }
+
+      ul {
+        display: block;
+        list-style-type: disc;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 40px;
+        list-style: none;
+      }
+
+      .sbn11 ul li a.is-active {
+        background-color: #700502;
+      }
+
+      .sbn11 ul li a {
+        border: 2px solid #201821;
+      }
+
+      ul li a {
+        box-sizing: border-box;
+        display: inline-block;
+        height: 14px;
+        outline: none;
+        overflow: hidden;
+        text-indent: 100%;
+        transition: 0.2s ease-in-out;
+        white-space: nowrap;
+        width: 14px;
+      }
+
+      a {
+        text-decoration: underline;
+      }
+
+      *,
+      ::after,
+      ::before {
+        box-sizing: border-box;
+      }
+
+      .grid-img-columns {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+      }
+
+      .img-responsive {
+        width: 250px;
+        display: block;
+        border-radius: 10px;
+        object-fit: cover;
+      }
+
+      .img-responsive:hover {
+        transform: scale(2);
       }
 
       footer {
         opacity: 0.8;
         text-align: center;
+        margin: 50px;
       }
 
-      @media (max-width: 400px) {
+      .grid-3-columns-with-first-narrow {
+        display: grid;
+        grid-template-columns: 1fr 2fr 2fr;
+        grid-gap: 20px;
+      }
+
+      .footer-paragraph {
+        text-align: left;
+      }
+
+      .social-links a {
+        margin: 0 5px;
+        color: #700502;
+        background: #fff;
+        padding: 10px 14px;
+        font-size: 30px;
+        border-radius: 50%;
+        transition: all 100ms ease-in-out;
+      }
+
+      .social-links a:hover {
+        color: white;
+        background: #700502;
+      }
+
+      @media (max-width: 900px) {
         .grid-2-columns {
           display: block;
         }
+        .grid-3-columns {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+        }
 
         .mainImg img {
-          max-width: 70%;
+          max-width: 100%;
           position: relative;
           right: -5px;
         }
@@ -98,66 +246,248 @@
 
           position: absolute;
           top: -13px;
-          right: 80px;
+          right: -20px;
 
           z-index: -1;
         }
 
         h1 {
-          font-size: 96px;
           text-align: center;
         }
 
-        p {
+        .biography {
           font-size: 14px;
+          text-align: center;
         }
-      }
-
-      @media (max-width: 900px) and (min-width: 401px) {
       }
     </style>
     <title>My favorite J-Rock star🌟</title>
   </head>
   <body>
-    <section class="container">
-      <div class="grid grid-2-columns">
-        <h1>GLAY</h1>
+    <div class="container">
+      <section id="top">
+        <div class="grid grid-2-columns">
+          <h1>GLAY</h1>
 
-        <figure class="mainImg">
-          <img
-            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/070/473/original/Glay_header.jpg?1678227740"
-            alt="GLAY member picture"
-          />
-        </figure>
+          <figure class="mainImg">
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/070/473/original/Glay_header.jpg?1678227740"
+              alt="GLAY member picture"
+            />
+          </figure>
+        </div>
+        <p class="biography">
+          GLAY is a Japanese rock band formed in 1988, with the core members
+          being together since 1992. They compose songs in rock and pop genres
+          and have experimented with various other genres. Their 1997 album
+          Review is the fifth best-selling album in Japan, with five million
+          copies sold. In 1999, they held the largest-ticketed concert ever by a
+          single act at the time, with 200,000 people attending. As of 2008,
+          GLAY had sold an estimated 51 million records, making them one of the
+          top ten best-selling artists of all time in Japan.
+        </p>
+      </section>
+      <main class="container" id="main">
+        <h2>Some of my favorites</h2>
+        <p>
+          It is hard to choose only a few songs from them. There are so many
+          legend songs!
+        </p>
+        <div class="video">
+          <div class="grid grid-3-columns">
+            <iframe
+              src="https://www.youtube.com/embed/gPcPseeICjs"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <iframe
+              src="https://www.youtube.com/embed/9GcBij9ylOo"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <iframe
+              src="https://www.youtube.com/embed/ujHgSf68VkY"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe
+            ><iframe
+              src="https://www.youtube.com/embed/MPM7-kyjkj0"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <iframe
+              src="https://www.youtube.com/embed/RAdzMJbqnQY"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe
+            ><iframe
+              src="https://www.youtube.com/embed/DR0DHxmIA4w"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe
+            ><iframe
+              src="https://www.youtube.com/embed/KGGGsLrmBg0"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe
+            ><iframe
+              src="https://www.youtube.com/embed/vvmjaawCERo"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <iframe
+              src="https://www.youtube.com/embed/Ky4uvLtFazw"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+        <section class="mb-5">
+          <div id="gallery">
+            <h2 class="mt-5">Gallery</h2>
+            <div class="grid grid-img-columns mt-5">
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/071/960/original/Glay_7.jpg?1678924458"
+                alt="GLAY member picture"
+                class="img-responsive"
+              />
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/071/959/original/Glay_6.png?1678924296"
+                alt="GLAY member picture"
+                class="img-responsive"
+              />
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/071/958/original/Glay_5.jpg?1678924291"
+                alt="GLAY member picture"
+                class="img-responsive"
+              />
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/071/957/original/Glay_3.png?1678924283"
+                alt="GLAY member picture"
+                class="img-responsive"
+              />
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/071/954/original/Glay_2.jpg?1678923983"
+                alt="GLAY member picture"
+                class="img-responsive"
+              />
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/071/953/original/Glay_1.jpg?1678923978"
+                alt="GLAY member picture"
+                class="img-responsive"
+              />
+            </div>
+          </div>
+        </section>
+      </main>
+      <div class="sbn-list">
+        <div class="sbn sbn11">
+          <ul>
+            <li>
+              <a href="./#" class="is-active" title="top">1</a>
+            </li>
+            <li>
+              <a href="./#main" class="" title="main">2</a>
+            </li>
+            <li>
+              <a href="./#gallery" class="" title="Gallery">3</a>
+            </li>
+            <li>
+              <a href="./#footer" class="" title="Footer">4</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <p>
-        GLAY is a Japanese rock band formed in 1988, with the core members being
-        together since 1992. They compose songs in rock and pop genres and have
-        experimented with various other genres. Their 1997 album Review is the
-        fifth best-selling album in Japan, with five million copies sold. In
-        1999, they held the largest-ticketed concert ever by a single act at the
-        time, with 200,000 people attending. As of 2008, GLAY had sold an
-        estimated 51 million records, making them one of the top ten
-        best-selling artists of all time in Japan.
-      </p>
-    </section>
-    <footer>
-      This page was coded with ❤ by
-      <a
-        href="https://www.linkedin.com/in/natsukishuko/"
-        target="_blank"
-        class="text-decoration-none"
-        >Natsuki Shuko</a
-      >
-      and
-      <a
-        href="https://github.com/NatsukiSh/pop-star-challenge"
-        target="_blank"
-        class="text-decoration-none"
-      >
-        Open-sourced</a
-      >
-    </footer>
-    <script></script>
+      <hr />
+      <footer id="footer">
+        <section class="grid grid-3-columns-with-first-narrow">
+          <div>
+            <h3>Follow GLAY!</h3>
+            <div class="social-links">
+              <a
+                href="https://www.youtube.com/channel/UC1DqlLj1onQhBfxW81OgQTw"
+                target="_blank"
+                title="Youtube"
+              >
+                <i class="fa-brands fa-youtube"> </i>
+              </a>
+              <a
+                href="https://www.instagram.com/happyswing_official/?hl=en"
+                target="_blank"
+                title="Instagram"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a
+                href="https://www.facebook.com/glayalg/"
+                target="_blank"
+                title="Facebook"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+            </div>
+          </div>
+          <div>
+            <h3>About this website</h3>
+            <p class="footer-paragraph">
+              I joined SheCodes challenge to create landing page about your
+              favorite pop star, and choose my all the time Japanese Rock band
+              GLAY ♥
+            </p>
+          </div>
+          <div>
+            <h3>About me</h3>
+            <p class="footer-paragraph">
+              I am self-motivated Frontend Web Developer. I have completed
+              Workshop in SheCodes and looking for new opportunity.
+              <br />
+              This page was coded with ♥ by Natsuki Shuko
+            </p>
+            <br />
+            <div class="social-links">
+              <a
+                href="https://www.linkedin.com/in/natsukishuko/"
+                target="_blank"
+                class="text-decoration-none"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+
+              <a
+                href="https://github.com/NatsukiSh/pop-star-challenge"
+                target="_blank"
+                class="text-decoration-none"
+                title="GitHub"
+              >
+                <i class="fa-brands fa-github"></i
+              ></a>
+            </div>
+          </div>
+        </section>
+      </footer>
+    </div>
+    <script>
+      function handleClick() {
+        document.getElementById("main").innerHTML = "Clicked";
+      }
+      let element = document.getElementById("sbn");
+
+      element.addEventListener("click", handleClick);
+    </script>
   </body>
 </html>
